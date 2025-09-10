@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tinta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Tinta para Pintura</h1>
+        
+        <div class="form-group">
+            <label for="altura">Altura das paredes (metros):</label>
+            <input type="number" id="altura" min="0.1" step="0.1" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="qtdParedes">Quantidade de paredes:</label>
+            <input type="number" id="qtdParedes" min="1" required>
+        </div>
+        
+        <div id="paredesContainer">
+            <!-- As inputs de largura serão adicionadas dinamicamente aqui -->
+        </div>
+        
+        <button id="calcular">Calcular</button>
+        
+        <div class="resultado" id="resultado">
+            <h2>Resultado</h2>
+            <div class="resultado-item">
+                <p>Área total a ser pintada: <span id="areaTotal" class="destaque">0</span> m²</p>
+            </div>
+            <div class="resultado-item">
+                <p>Rendimento necessário: <span id="litrosNecessarios" class="destaque">0</span> litros</p>
+            </div>
+            <div class="resultado-item">
+                <h3>Opções de compra:</h3>
+                <p id="opcoesCompra"></p>
+            </div>
+        </div>
+        
+        <div class="info">
+            <p><strong>Observação:</strong> Uma lata de 3,6L cobre 15m² com 2 demãos. Uma lata de 18L cobre 75m² com 2 demãos.</p>
+            <p>Esta calculadora já considera a aplicação de duas demãos de tinta.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
